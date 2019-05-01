@@ -51,12 +51,7 @@ func GetPersonById(w http.ResponseWriter, r *http.Request) {
 
 // API handler for getting all people
 func GetAllPeople(w http.ResponseWriter, r *http.Request) {
-	people, err := dao.Find(bson.M{})
-	if err != nil {
-		json.NewEncoder(w).Encode(bson.M{"result": "failure", "error": err.Error()})
-		return
-	}
-	json.NewEncoder(w).Encode(bson.M{"result": "success", "data": people})
+	json.NewEncoder(w).Encode(bson.M{"result": "success", "data": peopleArr})
 }
 
 // API handler for creating a new person
