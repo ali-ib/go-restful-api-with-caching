@@ -13,6 +13,7 @@ type Config struct {
 	DBNAME           string
 	COLLECTIONNAME   string
 	CACHETIME        time.Duration
+	PORTNUMBER       int
 }
 
 // Read and parse the configuration file

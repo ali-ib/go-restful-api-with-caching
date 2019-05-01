@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
+	"gomongo/configs"
 	"gomongo/controllers"
 	"log"
 	"net/http"
+	"strconv"
 
 	"github.com/gorilla/mux"
 )
@@ -26,6 +28,8 @@ func main() {
 
 	router := initRouter()
 
-	fmt.Println("Starting server on port 4500...")
-	log.Fatal(http.ListenAndServe(":4500", router))
+	port := strconv.Itoa(configs.Configs.PORTNUMBER)
+	fmt.Println(port)
+	fmt.Printf("Starting server on port %s...\n", port)
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }

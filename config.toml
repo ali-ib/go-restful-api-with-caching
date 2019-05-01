@@ -2,3 +2,4 @@ CONNECTIONSTRING="mongodb://localhost:27017"
 DBNAME="people"
 COLLECTIONNAME="peopleCollection"
 CACHETIME=90
+PORTNUMBER=4500
