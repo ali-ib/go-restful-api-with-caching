@@ -7,7 +7,7 @@ Clone the repo inside your `%GOPATH%/src` folder, then run the following command
 
   ```dep ensure -update```
   
-After getting the packages ready, you can create your database and collection by running the server and peroforming your first create request, or you can create the database and the collection and populate them with sample documents from `people.json` using `mongoimport` command:
+After getting the packages ready, you can create your database and collection by running the server and performing your first create request, or you can create the database and the collection and populate them with sample documents from `people.json` using `mongoimport` command:
 
 ```mongoimport --db people --collection peopleCollection --file people.json```
 
