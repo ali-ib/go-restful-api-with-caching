@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gomongo/configs"
-	"gomongo/controllers"
+	"go-restful-api-with-caching/configs"
+	"go-restful-api-with-caching/controllers"
 	"log"
 	"net/http"
 	"strconv"
@@ -29,7 +29,6 @@ func main() {
 	router := initRouter()
 
 	port := strconv.Itoa(configs.Configs.PORTNUMBER)
-	fmt.Println(port)
-	fmt.Printf("Starting server on port %s...\n", port)
+	fmt.Printf("Starting server on port %s...\n\n", port)
 	log.Fatal(http.ListenAndServe(":"+port, router))
 }

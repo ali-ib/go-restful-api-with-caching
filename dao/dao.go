@@ -2,8 +2,8 @@ package dao
 
 import (
 	"context"
-	"gomongo/configs"
-	"gomongo/models"
+	"go-restful-api-with-caching/configs"
+	"go-restful-api-with-caching/models"
 	"log"
 
 	"go.mongodb.org/mongo-driver/bson"

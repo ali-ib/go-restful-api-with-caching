@@ -3,9 +3,9 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"gomongo/configs"
-	"gomongo/dao"
-	"gomongo/models"
+	"go-restful-api-with-caching/configs"
+	"go-restful-api-with-caching/dao"
+	"go-restful-api-with-caching/models"
 	"log"
 	"net/http"
 	"strconv"
@@ -31,7 +31,7 @@ func SyncCache() {
 	ticker := time.NewTicker(configs.Configs.CACHETIME * time.Second)
 	for ; true; <-ticker.C {
 		fetchData()
-		fmt.Println(peopleArr)
+		fmt.Printf("Updating cache...\nCurrent content: %v\n\n", peopleArr)
 	}
 }
 
