@@ -1,8 +1,8 @@
-## GO RESTFul API with Caching
-### Description
+# GO RESTFul API with Caching
+## Description
 This is a straightforward implementation for a RESTFul API in Golang using Mongodb with simple caching using goroutines.
 
-### Installation
+## Installation
 Clone the repo inside your `%GOPATH%/src` folder, then run the following command to download the required packages:
 
   ```dep ensure -update```
